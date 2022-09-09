@@ -9,19 +9,25 @@
 </head>
 <body class="container text-center">
     <div class="card text-center position-absolute top-50 start-50 translate-middle" style="width: 20rem;">
-        <h1 class="card-header"> Login</h1>
+        <h1 class="card-header"> Register</h1>
         <div class="card-body">
-        <form action="proseslogin.php" method="POST">
+        <form action="prosesregister.php" method="POST">
             <span>Username: <input type="text" name="username"></span>
             <br>
             <br>
             <span>Password: <input type="password" name="password"></span>
             <br>
             <br>
-            <button class="btn btn-primary">Login</button>
+            <select class="form-select" aria-label="Default select example" name="role">
+                <option>admin</option>
+                <option>user</option>
+            </select>
+            <br>
+            <br>
+            <button class="btn btn-primary">Daftar</button>
         </form>
         </div>
-        <span>Tidak punya akun ?<a href="register.php">Daftar</a></span>
+        <span>Punya akun ?<a href="login.php">Login</a></span>
     </div>
 </body>
 </html>

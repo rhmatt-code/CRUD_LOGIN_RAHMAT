@@ -13,17 +13,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentv2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
     <h1>Table Database</h1>
-    <table>
+    <h3 class="position-absolute top-0 end-0 translate-middle-x">Hello <?php echo $_SESSION["username"] ?></h3>
+    <div class="container">
+    <table class="table">
         <thead>
-            <th>NIS</th>
+            <th>ID</th>
             <th>Nama</th>
             <th>Stok</th>
             <th>Price</th>
         </thead>
-        <tbody>
+        <tbody class="table-group-divider">
             <?php
                 foreach ($query as $querys){
                     echo "<tr>";
@@ -44,5 +47,6 @@
             ?>
         </tbody>
     </table>
+    <a class="btn btn-primary" href="../login/login.php">Log Out</a>
 </body>
 </html>
